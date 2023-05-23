@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Imagens flexíveis</title>
+</head>
+<body>
+    <h1>Imagem Dinamica</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.jpg" type="image/jpg"><!--Type serve para o SEO do google-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.jpg" type="image/jpg">
+        <img src="imagens/foto-g.jpg" alt="imagem flexivel funciona">
+    </picture>
+    <h1>Audio</h1>
+    <audio preload="metadata" controls loop>
+        <!--1 tentativa-->
+        <source src="audios/Wind Rose - Mine.mp3" type="audio/mpeg">
+        <!--2 tentativa-->
+        <source src="audios/Wind Rose - Mine.ogg" type="audio/ogg">
+        <!--Se não-->
+        <p>Seu navegador nao suporta audio</p><a href="audios/Wind Rose - Mine.mp3" download="Wind Rose - Mine" type="audio/mpeg"></a>
+    </audio>
+    <!--controls apresenta o player na tela-->
+    <h1>Vídeo local</h1>
+    <video poster="imagens/foto-p.jpg" controls>
+        <source src="audios/Irmaos.de.Guerra.2001.EP10.mkv" type="video/mkv">
+         <!--<source src="audios/Irmaos.de.Guerra.2001.EP10.mp4" type="video/mp4">-->
+    </video>
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/E01LDVj0Rpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

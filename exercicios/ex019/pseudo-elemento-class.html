@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elemento e classe</title>
+    <style>
+        body{
+            font: normal 1em Arial, Helvetica;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color: red;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .especial:hover{
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+        .especial::before{
+            content: '>>';
+            font-weight: lighter;
+        }
+        .especial::after{
+            content: '<<';
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando um link</h1>
+    <p>
+        Para aprender HTMl 5, acesse <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Github do Guanabara</a>
+    </p>
+    <p>
+        Padrões W3C <a href="https://www.w3c.br" target="_blank" rel="external"> W3C Brasil</a>
+    </p>
+    <p>
+        Para acompanhar os cursos, acesse o <a href="https://www.youtube.com/cursoemvideo" class="especial" target="_blank" rel="external">Canal do curso em Vídeo</a>
+    </p>
+</body>
+</html>
